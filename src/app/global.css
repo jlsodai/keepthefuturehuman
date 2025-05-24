@@ -21,7 +21,8 @@ span.littlefoot {
   margin-top: -5px !important;
 }
 
-sup.littlefoot--print {
+sup.littlefoot--print, span.littlefoot + sup {
     display: inline-block;
     opacity: 0;
+    width: 0;
 }
