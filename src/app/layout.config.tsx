@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 /**
