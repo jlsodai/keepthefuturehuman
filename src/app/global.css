@@ -20,3 +20,8 @@ span.littlefoot {
   line-height: 1;
   margin-top: -5px !important;
 }
+
+sup.littlefoot--print {
+    display: inline-block;
+    opacity: 0;
+}
