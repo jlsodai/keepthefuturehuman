@@ -3,11 +3,15 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import "littlefoot/dist/littlefoot.css";
 
+type LittlefootInstance = {
+  unmount: () => void;
+};
+
 export default function LittlefootProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    let instance: any;
+    let instance: LittlefootInstance | undefined;
     import("littlefoot").then((mod) => {
       instance = mod.default({
         activateOnHover: true,
