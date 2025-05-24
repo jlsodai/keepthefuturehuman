@@ -1,3 +1,22 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+ol.littlefoot--print, li.littlefoot--print {
+  display: revert;
+  /* padding-inline-start: 1.625em;
+  list-style-type: decimal; */
+}
+
+span.littlefoot {
+    background: unset !important;
+}
+
+.littlefoot__button {
+  height: 25px !important;
+  border-radius: .5rem !important;
+  background-color: var(--button-active-background-color) !important;
+  border-radius: 0.5rem !important;
+  line-height: 1;
+  margin-top: -5px !important;
+}
