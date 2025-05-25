@@ -11,9 +11,21 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     return <Component style={{ display: 'inline-block', ...style }} strokeWidth={strokeWidth} {...props} />;
   }
 
+  function Caption({ children, className = '', ...props }: { children: React.ReactNode, className?: string } & React.HTMLAttributes<HTMLSpanElement>) {
+    return (
+      <span
+        className={`block text-center italic my-2 text-sm text-gray-500 ${className}`}
+        {...props}
+      >
+        {children}
+      </span>
+    );
+  }
+
   return {
     ...defaultMdxComponents,
     Icon,
+    Caption,
     ...components,
   };
 }
