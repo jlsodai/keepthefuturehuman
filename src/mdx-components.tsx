@@ -7,7 +7,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   function Icon({ name, style, strokeWidth = 1.5, ...props }: { name: keyof typeof lucideIcons, style?: React.CSSProperties, strokeWidth?: number } & React.ComponentProps<'svg'>) {
     const LucideIcon = lucideIcons[name];
     if (!LucideIcon || typeof LucideIcon !== 'object' || !('render' in LucideIcon)) return null;
-    const Component = LucideIcon as unknown as React.ComponentType<any>;
+    const Component = LucideIcon as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
     return <Component style={{ display: 'inline-block', ...style }} strokeWidth={strokeWidth} {...props} />;
   }
 
