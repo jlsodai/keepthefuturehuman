@@ -25,30 +25,129 @@ Despite these impressive numbers (and their obvious intelligence when one intera
 
 The following table lists a number of these, based on mid-2024 AI systems such as GPT-4o, Claude 3.5 Sonnet, and Google Gemini 1.5.[^8] The key question for how rapidly general AI will become more powerful is: to what degree will just doing *more of the same* produce results, versus adding additional but *known* techniques, versus developing or implementing *really new* AI research directions. My own predictions for this are given in the table, in terms of how likely each of these scenarios is to get that capability to and beyond human level.
 
-| Capability | Description of capability | Status/prognosis | Scaling/known/new |
-|------------|---------------------------|------------------|-------------------|
-| **Core Cognitive Capabilities** | | | |
-| Reasoning | People can do accurate, multistep reasoning, following rules and checking accuracy. | Dramatic recent progress using extended chain-of-thought and retraining | 95/5/5 |
-| Planning | People exhibit long-term and hierarchical planning. | Improving with scale; can be strongly aided using scaffolding and better training techniques. | 10/85/5 |
-| Truth-grounding | GPAIs confabulate ungrounded information to satisfy queries. | Improving with scale; calibration data available within model; can be checked/improved via scaffolding. | 30/65/5 |
-| Flexible problem-solving | Humans can recognize new patterns and invent new solutions to complex problems; current ML models struggle. | Improves with scale but weakly; may be solvable with neurosymbolic or generalized "search" techniques. | 15/75/10 |
-| **Learning and Knowledge** | | | |
-| Learning & memory | People have working, short-term, and long-term memory, all of which are dynamic and inter-related. | All models learn during training; GPAIs learn within context window and during fine-tuning; "continual learning" and other techniques exist but not yet integrated into large GPAIs. | 5/80/15 |
-| Abstraction & recursion | People can map and transfer relation sets into more abstract ones for reasoning and manipulation, including recursive "meta" reasoning. | Weakly improving with scale; could emerge in neurosymbolic systems. | 30/50/20 |
-| World model(s) | People have and continually update a predictive world model within which they can solve problems and do physical reasoning | Improving with scale; updating tied to learning; GPAIS weak in real-world prediction. | 20/50/30 |
-| **Self and Agency** | | | |
-| Agency | People can take actions in order to pursue goals, based on planning/prediction. | Many ML systems are agentic; LLMs can be made agents via wrappers. | 5/90/5 |
-| Self-direction | People develop and pursue their own goals, with internally-generated motivation and drive. | Largely composed of agency plus originality; likely to emerge in complex agential systems with abstract goals. | 40/45/15 |
-| Self-reference | People understand and reason about themselves as situated within an environment/context. | Improving with scale and could be augmented with training reward. | 70/15/15 |
-| Self-awareness | People have knowledge of and can reason regarding their own thoughts and mental states. | Exists in some sense in GPAIs, which can arguably pass the classic "mirror test" for self-awareness. Can be improved with scaffolding; but unclear if this is enough. | 20/55/25 |
-| **Interface and Environment** | | | |
-| Embodied intelligence | People understand and actively interact with their real-world environment. | Reinforcement learning works well in simulated and real-world (robotic) environments and can be integrated into multimodal transformers. | 5/85/10 |
-| Multi-sense processing | People integrate and real-time process visual, audio, and other sensory streams. | Training in multiple modalities appears to "just work," and improve with scale. Realtime video processing is difficult but e.g. self-driving systems are rapidly improving. | 30/60/10 |
-| **Higher-order Capabilities** | | | |
-| Originality | Current ML models are creative in transforming and combining existing ideas/works, but people can build new frameworks and structures, sometimes tied to their identity. | Can be hard to discern from "creativity," which may scale into it; may emerge from creativity plus self-awareness. | 50/40/10 |
-| Sentience | People experience qualia; these can be positive, negative or neutral valence; it is "like something" to be a person. | Very difficult and philosophically fraught to determine whether a given system has this. | 5/10/85 |
+<table>
+  <tbody>
+    <tr>
+      <th>Capability</th>
+      <th>Description of capability</th>
+      <th>Status/prognosis</th>
+      <th>Scaling/known/new</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colSpan="4"><em>Core Cognitive Capabilities</em></td>
+    </tr>
+    <tr>
+      <td>Reasoning</td>
+      <td>People can do accurate, multistep reasoning, following rules and checking accuracy.</td>
+      <td>Dramatic recent progress using extended chain-of-thought and retraining</td>
+      <td>95/5/5</td>
+    </tr>
+    <tr>
+      <td>Planning</td>
+      <td>People exhibit long-term and hierarchical planning.</td>
+      <td>Improving with scale; can be strongly aided using scaffolding and better training techniques.</td>
+      <td>10/85/5</td>
+    </tr>
+    <tr>
+      <td>Truth-grounding</td>
+      <td>GPAIs confabulate ungrounded information to satisfy queries.</td>
+      <td>Improving with scale; calibration data available within model; can be checked/improved via scaffolding.</td>
+      <td>30/65/5</td>
+    </tr>
+    <tr>
+      <td>Flexible problem-solving</td>
+      <td>Humans can recognize new patterns and invent new solutions to complex problems; current ML models struggle.</td>
+      <td>Improves with scale but weakly; may be solvable with neurosymbolic or generalized “search” techniques.</td>
+      <td>15/75/10</td>
+    </tr>
+    <tr>
+      <td colSpan="4"><em>Learning and Knowledge</em></td>
+    </tr>
+    <tr>
+      <td>Learning &amp; memory</td>
+      <td>People have working, short-term, and long-term memory, all of which are dynamic and inter-related.</td>
+      <td>All models learn during training; GPAIs learn within context window and during fine-tuning; “continual learning” and other techniques exist but not yet integrated into large GPAIs.</td>
+      <td>5/80/15</td>
+    </tr>
+    <tr>
+      <td>Abstraction &amp; recursion</td>
+      <td>People can map and transfer relation sets into more abstract ones for reasoning and manipulation, including recursive “meta” reasoning.</td>
+      <td>Weakly improving with scale; could emerge in neurosymbolic systems.</td>
+      <td>30/50/20</td>
+    </tr>
+    <tr>
+      <td>World model(s)</td>
+      <td>People have and continually update a predictive world model within which they can solve problems and do physical reasoning</td>
+      <td>Improving with scale; updating tied to learning; GPAIS weak in real-world prediction.</td>
+      <td>20/50/30</td>
+    </tr>
+    <tr>
+      <td colSpan="4"><em>Self and Agency</em></td>
+    </tr>
+    <tr>
+      <td>Agency</td>
+      <td>People can take actions in order to pursue goals, based on planning/prediction.</td>
+      <td>Many ML systems are agentic; LLMs can be made agents via wrappers.</td>
+      <td>5/90/5</td>
+    </tr>
+    <tr>
+      <td>Self-direction</td>
+      <td>People develop and pursue their own goals, with internally-generated motivation and drive.</td>
+      <td>Largely composed of agency plus originality; likely to emerge in complex agential systems with abstract goals.</td>
+      <td>40/45/15</td>
+    </tr>
+    <tr>
+      <td>Self-reference</td>
+      <td>People understand and reason about themselves as situated within an environment/context.</td>
+      <td>Improving with scale and could be augmented with training reward.</td>
+      <td>70/15/15</td>
+    </tr>
+    <tr>
+      <td>Self-awareness</td>
+      <td>People have knowledge of and can reason regarding their own thoughts and mental states.</td>
+      <td>Exists in some sense in GPAIs, which can arguably pass the classic “mirror test” for self-awareness. Can be improved with scaffolding; but unclear if this is enough.</td>
+      <td>20/55/25</td>
+    </tr>
+    <tr>
+      <td colSpan="4"><em>Interface and Environment</em></td>
+    </tr>
+    <tr>
+      <td>Embodied intelligence</td>
+      <td>People understand and actively interact with their real-world environment.</td>
+      <td>Reinforcement learning works well in simulated and real-world (robotic) environments and can be integrated into multimodal transformers.</td>
+      <td>5/85/10</td>
+    </tr>
+    <tr>
+      <td>Multi-sense processing</td>
+      <td>People integrate and real-time process visual, audio, and other sensory streams.</td>
+      <td>Training in multiple modalities appears to “just work,” and improve with scale. Realtime video processing is difficult but e.g. self-driving systems are rapidly improving.</td>
+      <td>30/60/10</td>
+    </tr>
+    <tr>
+      <td colSpan="4"><em>Higher-order Capabilities</em></td>
+    </tr>
+    <tr>
+      <td>Originality</td>
+      <td>Current ML models are creative in transforming and combining existing ideas/works, but people can build new frameworks and structures, sometimes tied to their identity.</td>
+      <td>Can be hard to discern from “creativity,” which may scale into it; may emerge from creativity plus self-awareness.</td>
+      <td>50/40/10</td>
+    </tr>
+    <tr>
+      <td>Sentience</td>
+      <td>People experience qualia; these can be positive, negative or neutral valence; it is “like something” to be a person.</td>
+      <td>Very difficult and philosophically fraught to determine whether a given system has this.</td>
+      <td>5/10/85</td>
+    </tr>
+  </tbody>
+</table>
 
-*Key capabilities currently below human expert level in modern GPAI systems, grouped by type. The third column summarizes current status. Final column shows predicted likelihood (%) that human-level performance will be achieved through: scaling current techniques / combining with known techniques / developing new techniques. These capabilities are not independent, and increase in any one typically goes along with increases in others. Note that not all (particularly sentience) are necessary for AI systems capable of advancing AI development, highlighting the possibility of powerful but non-sentient AI.*
+<Caption>Key capabilities currently below human expert level in modern GPAI systems, grouped by type. The third column summarizes current status. Final column shows predicted likelihood (%) that human-level performance will be achieved through: scaling current techniques / combining with known techniques / developing new techniques. These capabilities are not independent, and increase in any one typically goes along with increases in others. Note that not all (particularly sentience) are necessary for AI systems capable of advancing AI development, highlighting the possibility of powerful but non-sentient AI.</Caption>
 
 Breaking down what is "missing" in this way makes it fairly clear that we are quite on-track for broadly above-human intelligence by scaling existing or known techniques.[^9]
 
