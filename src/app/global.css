@@ -195,7 +195,7 @@ html, body {
 /* Use Inter for sidebar and toc */
 #nd-sidebar, #nd-toc .prose {
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
 }
 
 .prose {
