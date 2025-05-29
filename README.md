@@ -23,7 +23,7 @@ I developed this as a contribution to the AI safety community to enhance access 
 
 ### Prerequisites
 
-- Node.js (version X or higher)
+- Node.js
 - Git for version control
 
 ### Installation
