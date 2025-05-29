@@ -19,6 +19,14 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
+      text: 'Home',
+      url: '/',
+    },
+    {
+      text: 'Interactive Summary',
+      url: 'https://interactive.keepthefuturehuman.ai/',
+    },
+    {
       text: 'The Essay',
       url: '/docs',
       active: 'nested-url',
