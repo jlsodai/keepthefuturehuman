@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -144,4 +145,46 @@ sup.littlefoot--print, span.littlefoot + sup {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/charter_regular-webfont.woff') format('woff'),
+       url('/fonts/charter_regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/charter_bold-webfont.woff') format('woff'),
+       url('/fonts/charter_bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/charter_italic-webfont.woff') format('woff'),
+       url('/fonts/charter_italic-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Charter';
+  src: url('/fonts/charter_bold_italic-webfont.woff') format('woff'),
+       url('/fonts/charter_bold_italic-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html, body {
+  font-family: 'Charter', serif;
+}
+
+/* Use Inter for sidebar and toc */
+#nd-sidebar, #nd-toc {
+  font-family: 'Inter', sans-serif !important;
 }

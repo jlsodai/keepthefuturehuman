@@ -1,12 +1,7 @@
 import './global.css';
 import { RootProvider } from 'fumadocs-ui/provider';
-import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 import Script from 'next/script';
-
-const inter = Inter({
-  subsets: ['latin'],
-});
 
 export const metadata = {
   title: 'Keep The Future Human',
@@ -40,7 +35,7 @@ export const metadata = {
 export default function Layout({ children }: { children: ReactNode }) {
   const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
