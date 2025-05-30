@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -17,18 +18,38 @@ span.littlefoot {
 }
 
 .littlefoot__button {
-  height: 25px !important;
-  border-radius: .5rem !important;
-  background-color: var(--button-active-background-color) !important;
-  border-radius: 0.5rem !important;
   line-height: 1;
-  margin-top: -5px !important;
 }
 
 sup.littlefoot--print, span.littlefoot + sup {
-    display: inline-block;
     opacity: 0;
     width: 0;
+}
+
+.littlefoot {
+  --button-background-color: #ff944d !important;
+  --button-active-background-color: #803300 !important;
+  --button-text-color: #2f2d2d !important;
+  --button-font-size: 14px !important;
+  --button-height: 20px !important;
+  --button-padding: 0.25rem 0.3rem 0.5rem 0.3rem !important;
+  --button-margin: 0 0 !important;
+  --button-border-radius: 5px !important;
+ 
+  --popover-background-color: #FFF !important;
+  --popover-border: 2px solid var(--base-light) !important;
+  --popover-horizontal-padding: 2.2rem !important;
+  --popover-vertical-padding: 1.4rem !important;
+  --popover-font-family: Charter !important;
+  --popover-font-size: var(--text-s) !important;
+  --popover-transform: opacity 1 !important;
+  --popover-transition: opacity 0.25s ease !important;
+ }
+
+ .littlefoot > button {
+	vertical-align: unset;
+	font-family: Roboto;
+	font-weight: 600;
 }
 
 @theme inline {
@@ -75,6 +96,8 @@ sup.littlefoot--print, span.littlefoot + sup {
   --text-3xl: 2.16rem;
   --text-4xl: 2.59rem;
   --text-5xl: 3.45rem;
+
+  --color-general-link: #ff944d;
 }
 
 :root {
@@ -209,4 +232,13 @@ h3.not-prose.text-sm{
 
 .prose .text-sm {
   font-size: 0.95rem;
+}
+
+.prose {
+  --tw-prose-links: var(--color-general-link);
+}
+
+.prose :where(a:not([data-card])):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: var(--color-general-link);
+  text-decoration-color: var(--color-general-link);
 }
