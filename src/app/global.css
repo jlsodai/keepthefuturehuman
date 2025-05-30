@@ -24,6 +24,7 @@ span.littlefoot {
 sup.littlefoot--print, span.littlefoot + sup {
     opacity: 0;
     width: 0;
+    display: inline-block;
 }
 
 .littlefoot {
