@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { FileText, Home, Link } from 'lucide-react';
 
 /**
  * Shared layout configurations
@@ -12,23 +13,27 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <img width="24" src="https://keepthefuturehuman.ai/wp-content/uploads/2025/03/KTFH-Logo-Dark.png" alt="Keep The Future Human Logo" />
+        <img width="24" src="/favicon.png" alt="Keep The Future Human Logo" />
         Keep The Future Human
       </>
     ),
+    url: 'https://keepthefuturehuman.ai/',
   },
   links: [
     {
       text: 'Home',
-      url: '/',
+      url: 'https://keepthefuturehuman.ai/',
+      icon: <Home />
     },
     {
       text: 'Interactive Summary',
       url: 'https://interactive.keepthefuturehuman.ai/',
+      icon: <Link />
     },
     {
       text: 'The Essay',
       url: '/docs',
+      icon: <FileText />,
       active: 'nested-url',
     },
   ],
